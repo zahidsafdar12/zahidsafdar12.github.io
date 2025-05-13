@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Marketing Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#3176FF", secondary: "#f97316" },
+            borderRadius: {
+              none: "0px",
+              sm: "8px",
+              DEFAULT: "12px",
+              md: "16px",
+              lg: "20px",
+              xl: "24px",
+              "2xl": "28px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "12px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Inter', sans-serif;
+          scroll-behavior: smooth;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      input[type=number] {
+          -moz-appearance: textfield;
+      }
+      .counter-value {
+          transition: all 0.5s ease;
+      }
+      .progress-bar {
+          transition: width 1.5s ease-in-out;
+      }
+      .portfolio-item {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .portfolio-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .testimonial-slide {
+          transition: opacity 0.5s ease;
+      }
+      .custom-switch {
+          position: relative;
+          display: inline-block;
+          width: 50px;
+          height: 24px;
+      }
+      .custom-switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #e5e7eb;
+          transition: .4s;
+          border-radius: 34px;
+      }
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 18px;
+          width: 18px;
+          left: 3px;
+          bottom: 3px;
+          background-color: white;
+          transition: .4s;
+          border-radius: 50%;
+      }
+      input:checked + .slider {
+          background-color: #4f46e5;
+      }
+      input:checked + .slider:before {
+          transform: translateX(26px);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#about"
+            class="font-medium hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#experience"
+            class="font-medium hover:text-primary transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#portfolio"
+            class="font-medium hover:text-primary transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="#metrics"
+            class="font-medium hover:text-primary transition-colors"
+            >Metrics</a
+          >
+          <a
+            href="#testimonials"
+            class="font-medium hover:text-primary transition-colors"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="font-medium hover:text-primary transition-colors"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="md:hidden flex items-center justify-center w-10 h-10 !rounded-button"
+        >
+          <i class="ri-menu-line text-xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="about"
+      class="pt-24 pb-20 relative overflow-hidden"
+      style="background-image: url('https://readdy.ai/api/search-image?query=abstract%20modern%20gradient%20background%20with%20soft%20blue%20and%20purple%20tones%2C%20minimalist%20design%20with%20subtle%20geometric%20patterns%2C%20perfect%20for%20a%20professional%20social%20media%20marketing%20portfolio%20hero%20section%2C%20clean%20and%20elegant%2C%20high%20quality%20professional%20look&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/50"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-12"
+        >
+          <div class="w-full md:w-1/2">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+              Elevating Brands Through Strategic
+              <span class="text-primary">Social Media Marketing</span>
+            </h1>
+            <p class="text-lg text-gray-700 mb-8">
+              Passionate social media strategist with 2+ years of experience
+              driving engagement, building communities, and delivering
+              measurable results for brands across multiple industries.
+            </p>
+
+            <div class="flex flex-wrap gap-6 mb-8">
+              <div class="counter-container">
+                <div
+                  class="text-3xl font-bold text-primary counter-value"
+                  data-target="5.2"
+                >
+                  0
+                </div>
+                <p class="text-sm text-gray-600">Million+ Reach</p>
+              </div>
+              <div class="counter-container">
+                <div
+                  class="text-3xl font-bold text-primary counter-value"
+                  data-target="24"
+                >
+                  0
+                </div>
+                <p class="text-sm text-gray-600">Clients Served</p>
+              </div>
+              <div class="counter-container">
+                <div
+                  class="text-3xl font-bold text-primary counter-value"
+                  data-target="187"
+                >
+                  0
+                </div>
+                <p class="text-sm text-gray-600">Campaigns Launched</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#portfolio"
+                class="px-6 py-3 bg-primary text-white font-medium !rounded-button hover:bg-primary/90 transition-all whitespace-nowrap"
+                >View Portfolio</a
+              >
+              <a
+                href="#contact"
+                class="px-6 py-3 border border-primary text-primary font-medium !rounded-button hover:bg-primary/5 transition-all whitespace-nowrap"
+                >Get in Touch</a
+              >
+            </div>
+          </div>
+
+          <div class="w-full md:w-2/5">
+            <div class="relative">
+              <div
+                class="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl"
+              >
+                <img
+                  src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20marketing%20professional%20with%20confident%20smile%2C%20business%20casual%20attire%2C%20neutral%20background%2C%20high%20quality%20professional%20headshot%2C%20realistic%2C%20detailed%2C%20studio%20lighting&width=800&height=800&seq=2&orientation=squarish"
+                  alt="Professional Headshot"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div
+                class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4"
+              >
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full"
+                  >
+                    <i class="ri-linkedin-fill text-blue-600"></i>
+                  </div>
+                  <div
+                    class="w-8 h-8 flex items-center justify-center bg-pink-100 rounded-full"
+                  >
+                    <i class="ri-instagram-fill text-pink-600"></i>
+                  </div>
+                  <div
+                    class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full"
+                  >
+                    <i class="ri-twitter-fill text-blue-400"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Expertise -->
+    <section id="experience" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Experience & Expertise</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Leveraging data-driven strategies to create engaging content and
+            build meaningful connections between brands and their audiences.
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative max-w-4xl mx-auto mb-20">
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"
+          ></div>
+
+          <!-- Timeline Item 1 -->
+          <div class="relative z-10 mb-12">
+            <div class="flex items-center">
+              <div class="flex-1 text-right pr-8 md:pr-12">
+                <h3 class="font-semibold text-lg">
+                  Senior Social Media Strategist
+                </h3>
+                <p class="text-primary font-medium">Digital Pulse Agency</p>
+                <p class="text-sm text-gray-500">January 2024 - Present</p>
+              </div>
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary rounded-full border-4 border-white shadow"
+              >
+                <i class="ri-briefcase-line text-white"></i>
+              </div>
+              <div class="flex-1 pl-8 md:pl-12">
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>
+                    • Lead strategy for 8 client accounts across retail and tech
+                    sectors
+                  </li>
+                  <li>
+                    • Increased average engagement rate by 34% across all
+                    accounts
+                  </li>
+                  <li>
+                    • Manage a team of 3 content creators and 2 community
+                    managers
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="relative z-10 mb-12">
+            <div class="flex items-center">
+              <div class="flex-1 text-right pr-8 md:pr-12">
+                <h3 class="font-semibold text-lg">Social Media Specialist</h3>
+                <p class="text-primary font-medium">BrandConnect Media</p>
+                <p class="text-sm text-gray-500">June 2022 - December 2023</p>
+              </div>
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary rounded-full border-4 border-white shadow"
+              >
+                <i class="ri-briefcase-line text-white"></i>
+              </div>
+              <div class="flex-1 pl-8 md:pl-12">
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Managed social presence for 12 SMB clients</li>
+                  <li>
+                    • Created and implemented content calendars across platforms
+                  </li>
+                  <li>• Grew combined audience by 150K+ followers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="relative z-10">
+            <div class="flex items-center">
+              <div class="flex-1 text-right pr-8 md:pr-12">
+                <h3 class="font-semibold text-lg">Social Media Intern</h3>
+                <p class="text-primary font-medium">CreativeEdge Marketing</p>
+                <p class="text-sm text-gray-500">January 2022 - May 2022</p>
+              </div>
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary rounded-full border-4 border-white shadow"
+              >
+                <i class="ri-briefcase-line text-white"></i>
+              </div>
+              <div class="flex-1 pl-8 md:pl-12">
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>
+                    • Assisted with content creation and community management
+                  </li>
+                  <li>• Conducted competitor analysis and audience research</li>
+                  <li>• Contributed to campaign planning and reporting</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-2xl font-bold mb-8 text-center">
+            Platform Expertise
+          </h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Skill 1 -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Instagram</span>
+                <span class="text-primary font-medium">92%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded">
+                <div
+                  class="h-full bg-primary rounded progress-bar"
+                  style="width: 0%"
+                  data-width="92%"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">TikTok</span>
+                <span class="text-primary font-medium">88%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded">
+                <div
+                  class="h-full bg-primary rounded progress-bar"
+                  style="width: 0%"
+                  data-width="88%"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">LinkedIn</span>
+                <span class="text-primary font-medium">85%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded">
+                <div
+                  class="h-full bg-primary rounded progress-bar"
+                  style="width: 0%"
+                  data-width="85%"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Skill 4 -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Facebook</span>
+                <span class="text-primary font-medium">78%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded">
+                <div
+                  class="h-full bg-primary rounded progress-bar"
+                  style="width: 0%"
+                  data-width="78%"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Skill 5 -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Twitter</span>
+                <span class="text-primary font-medium">75%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded">
+                <div
+                  class="h-full bg-primary rounded progress-bar"
+                  style="width: 0%"
+                  data-width="75%"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Skill 6 -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Pinterest</span>
+                <span class="text-primary font-medium">70%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded">
+                <div
+                  class="h-full bg-primary rounded progress-bar"
+                  style="width: 0%"
+                  data-width="70%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Showcase -->
+    <section id="portfolio" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Portfolio Showcase</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore a selection of my most successful social media campaigns and
+            the measurable results they delivered.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+          <button
+            class="px-4 py-2 bg-primary text-white font-medium !rounded-button whitespace-nowrap filter-btn active"
+            data-filter="all"
+          >
+            All Projects
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-100 text-gray-700 font-medium !rounded-button hover:bg-gray-200 whitespace-nowrap filter-btn"
+            data-filter="instagram"
+          >
+            Instagram
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-100 text-gray-700 font-medium !rounded-button hover:bg-gray-200 whitespace-nowrap filter-btn"
+            data-filter="tiktok"
+          >
+            TikTok
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-100 text-gray-700 font-medium !rounded-button hover:bg-gray-200 whitespace-nowrap filter-btn"
+            data-filter="facebook"
+          >
+            Facebook
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-100 text-gray-700 font-medium !rounded-button hover:bg-gray-200 whitespace-nowrap filter-btn"
+            data-filter="linkedin"
+          >
+            LinkedIn
+          </button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Portfolio Item 1 -->
+          <div
+            class="portfolio-item rounded-lg overflow-hidden shadow-md bg-white"
+            data-category="instagram tiktok"
+          >
+            <div class="relative h-56">
+              <img
+                src="https://readdy.ai/api/search-image?query=lifestyle%20brand%20social%20media%20campaign%20featuring%20fashion%20products%2C%20clean%20aesthetic%2C%20professional%20product%20photography%20with%20models%2C%20instagram%20style%20content%2C%20high%20engagement%20social%20media%20marketing%20campaign%2C%20high%20quality%20professional%20marketing%20content&width=600&height=400&seq=3&orientation=landscape"
+                alt="Urban Outfitters Campaign"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white rounded-full px-3 py-1 text-xs font-medium text-primary"
+              >
+                Instagram
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold text-lg">Urban Outfitters</h3>
+                <span class="text-sm text-gray-500">Summer 2023</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Seasonal campaign focused on driving engagement and sales for
+                summer collection launch.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">2.1% Engagement</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">5.8% Engagement</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">12K Followers</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">28K Followers</p>
+                </div>
+              </div>
+
+              <button
+                class="w-full py-2 border border-primary text-primary font-medium !rounded-button hover:bg-primary/5 transition-all whitespace-nowrap"
+              >
+                View Case Study
+              </button>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 2 -->
+          <div
+            class="portfolio-item rounded-lg overflow-hidden shadow-md bg-white"
+            data-category="tiktok"
+          >
+            <div class="relative h-56">
+              <img
+                src="https://readdy.ai/api/search-image?query=food%20delivery%20app%20social%20media%20campaign%2C%20colorful%20food%20photography%2C%20mobile%20app%20interface%20with%20food%20delivery%2C%20tiktok%20style%20content%2C%20viral%20marketing%20campaign%2C%20high%20quality%20professional%20marketing%20content&width=600&height=400&seq=4&orientation=landscape"
+                alt="FoodDash Campaign"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white rounded-full px-3 py-1 text-xs font-medium text-primary"
+              >
+                TikTok
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold text-lg">FoodDash</h3>
+                <span class="text-sm text-gray-500">Fall 2023</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Viral TikTok campaign that increased app downloads by 47% in
+                just 3 weeks.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">8K Daily Views</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">1.2M Daily Views</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">2.3% CTR</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">7.8% CTR</p>
+                </div>
+              </div>
+
+              <button
+                class="w-full py-2 border border-primary text-primary font-medium !rounded-button hover:bg-primary/5 transition-all whitespace-nowrap"
+              >
+                View Case Study
+              </button>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 3 -->
+          <div
+            class="portfolio-item rounded-lg overflow-hidden shadow-md bg-white"
+            data-category="linkedin facebook"
+          >
+            <div class="relative h-56">
+              <img
+                src="https://readdy.ai/api/search-image?query=b2b%20tech%20company%20social%20media%20campaign%2C%20professional%20business%20setting%2C%20linkedin%20style%20content%2C%20data%20visualization%2C%20corporate%20marketing%20campaign%2C%20high%20quality%20professional%20marketing%20content&width=600&height=400&seq=5&orientation=landscape"
+                alt="TechSolutions Campaign"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white rounded-full px-3 py-1 text-xs font-medium text-primary"
+              >
+                LinkedIn
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold text-lg">TechSolutions Inc.</h3>
+                <span class="text-sm text-gray-500">Winter 2023</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                B2B lead generation campaign that established thought leadership
+                in the tech industry.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">15 Leads/Month</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">68 Leads/Month</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">1.2% Conversion</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">4.5% Conversion</p>
+                </div>
+              </div>
+
+              <button
+                class="w-full py-2 border border-primary text-primary font-medium !rounded-button hover:bg-primary/5 transition-all whitespace-nowrap"
+              >
+                View Case Study
+              </button>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 4 -->
+          <div
+            class="portfolio-item rounded-lg overflow-hidden shadow-md bg-white"
+            data-category="instagram facebook"
+          >
+            <div class="relative h-56">
+              <img
+                src="https://readdy.ai/api/search-image?query=beauty%20brand%20social%20media%20campaign%2C%20cosmetic%20products%20with%20models%2C%20instagram%20and%20facebook%20style%20content%2C%20beauty%20influencer%20marketing%2C%20high%20quality%20professional%20marketing%20content&width=600&height=400&seq=6&orientation=landscape"
+                alt="GlowUp Campaign"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white rounded-full px-3 py-1 text-xs font-medium text-primary"
+              >
+                Instagram
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold text-lg">GlowUp Cosmetics</h3>
+                <span class="text-sm text-gray-500">Spring 2023</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Influencer-driven campaign for new product line launch with
+                user-generated content strategy.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">3.2% Engagement</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">8.7% Engagement</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">$12K Revenue</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">$78K Revenue</p>
+                </div>
+              </div>
+
+              <button
+                class="w-full py-2 border border-primary text-primary font-medium !rounded-button hover:bg-primary/5 transition-all whitespace-nowrap"
+              >
+                View Case Study
+              </button>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 5 -->
+          <div
+            class="portfolio-item rounded-lg overflow-hidden shadow-md bg-white"
+            data-category="tiktok instagram"
+          >
+            <div class="relative h-56">
+              <img
+                src="https://readdy.ai/api/search-image?query=fitness%20app%20social%20media%20campaign%2C%20workout%20videos%20and%20fitness%20tracking%2C%20mobile%20app%20interface%2C%20tiktok%20and%20instagram%20style%20content%2C%20health%20and%20wellness%20marketing%2C%20high%20quality%20professional%20marketing%20content&width=600&height=400&seq=7&orientation=landscape"
+                alt="FitLife Campaign"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white rounded-full px-3 py-1 text-xs font-medium text-primary"
+              >
+                TikTok
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold text-lg">FitLife App</h3>
+                <span class="text-sm text-gray-500">Summer 2023</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Challenge-based campaign that drove app downloads and user
+                retention through community building.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">850 Downloads/Week</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">4,200 Downloads/Week</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">22% Retention</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">58% Retention</p>
+                </div>
+              </div>
+
+              <button
+                class="w-full py-2 border border-primary text-primary font-medium !rounded-button hover:bg-primary/5 transition-all whitespace-nowrap"
+              >
+                View Case Study
+              </button>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 6 -->
+          <div
+            class="portfolio-item rounded-lg overflow-hidden shadow-md bg-white"
+            data-category="linkedin facebook"
+          >
+            <div class="relative h-56">
+              <img
+                src="https://readdy.ai/api/search-image?query=financial%20services%20social%20media%20campaign%2C%20professional%20business%20setting%2C%20linkedin%20and%20facebook%20style%20content%2C%20finance%20and%20investment%20marketing%2C%20high%20quality%20professional%20marketing%20content&width=600&height=400&seq=8&orientation=landscape"
+                alt="WealthWise Campaign"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white rounded-full px-3 py-1 text-xs font-medium text-primary"
+              >
+                LinkedIn
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold text-lg">WealthWise Financial</h3>
+                <span class="text-sm text-gray-500">Fall 2022</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Educational content series that positioned the brand as a
+                trusted financial advisor.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">0.8% Engagement</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">3.2% Engagement</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded">
+                  <p class="text-xs text-gray-500">Before</p>
+                  <p class="font-semibold">5 Consultations/Month</p>
+                </div>
+                <div class="bg-primary/10 p-3 rounded">
+                  <p class="text-xs text-gray-500">After</p>
+                  <p class="font-semibold text-primary">
+                    32 Consultations/Month
+                  </p>
+                </div>
+              </div>
+
+              <button
+                class="w-full py-2 border border-primary text-primary font-medium !rounded-button hover:bg-primary/5 transition-all whitespace-nowrap"
+              >
+                View Case Study
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campaign Metrics Dashboard -->
+    <section id="metrics" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Campaign Metrics Dashboard</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Data-driven insights that demonstrate the measurable impact of my
+            social media strategies.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Chart 1: Engagement Rates -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">
+              Engagement Rates by Platform
+            </h3>
+            <div id="engagementChart" class="h-80 w-full"></div>
+          </div>
+
+          <!-- Chart 2: Audience Growth -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">
+              Audience Growth Over Time
+            </h3>
+            <div id="audienceChart" class="h-80 w-full"></div>
+          </div>
+
+          <!-- Chart 3: Content Performance -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">
+              Content Performance by Type
+            </h3>
+            <div id="contentChart" class="h-80 w-full"></div>
+          </div>
+
+          <!-- Chart 4: ROI Calculation -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Campaign ROI Analysis</h3>
+            <div id="roiChart" class="h-80 w-full"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section id="testimonials" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Client Testimonials</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Don't just take my word for it. Here's what my clients have to say
+            about working together.
+          </p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+          <div class="testimonial-slider overflow-hidden">
+            <div
+              class="testimonial-wrapper flex transition-transform duration-500"
+              style="transform: translateX(0%)"
+            >
+              <!-- Testimonial 1 -->
+              <div class="testimonial-slide w-full flex-shrink-0 p-4">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                  <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20female%20marketing%20director%2C%2040s%2C%20business%20attire%2C%20neutral%20background%2C%20corporate%20portrait%2C%20high%20quality&width=200&height=200&seq=9&orientation=squarish"
+                        alt="Sarah Johnson"
+                        class="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">Sarah Johnson</h4>
+                      <p class="text-gray-600 text-sm">
+                        Marketing Director, Urban Outfitters
+                      </p>
+                      <div class="flex mt-1">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700">
+                    "Working with this social media strategist transformed our
+                    brand's online presence. They developed a comprehensive
+                    strategy that not only increased our engagement but directly
+                    contributed to a 32% increase in online sales. Their ability
+                    to understand our brand voice and translate it into
+                    compelling content was exceptional."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="testimonial-slide w-full flex-shrink-0 p-4">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                  <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20male%20CEO%2C%2030s%2C%20casual%20business%20attire%2C%20startup%20environment%2C%20tech%20company%2C%20high%20quality&width=200&height=200&seq=10&orientation=squarish"
+                        alt="Michael Chen"
+                        class="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">Michael Chen</h4>
+                      <p class="text-gray-600 text-sm">CEO, FoodDash</p>
+                      <div class="flex mt-1">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700">
+                    "Our TikTok campaign exceeded all expectations. Within just
+                    three weeks, we saw a 47% increase in app downloads and a
+                    significant boost in user engagement. Their strategic
+                    approach, creativity, and data-driven optimization made all
+                    the difference. I highly recommend their services to any
+                    brand looking to make an impact on social media."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="testimonial-slide w-full flex-shrink-0 p-4">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                  <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20female%20product%20manager%2C%2030s%2C%20business%20casual%20attire%2C%20tech%20company%2C%20high%20quality&width=200&height=200&seq=11&orientation=squarish"
+                        alt="Jennifer Patel"
+                        class="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">Jennifer Patel</h4>
+                      <p class="text-gray-600 text-sm">
+                        Product Manager, TechSolutions Inc.
+                      </p>
+                      <div class="flex mt-1">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-half-fill text-yellow-400"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700">
+                    "As a B2B company, we were struggling to generate quality
+                    leads through social media. Their LinkedIn strategy
+                    completely changed that. They created thought leadership
+                    content that resonated with our target audience and
+                    established our executives as industry experts. Our lead
+                    generation increased by 353% in just four months."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button
+            class="absolute top-1/2 -left-4 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-gray-100 focus:outline-none prev-testimonial"
+          >
+            <i class="ri-arrow-left-s-line"></i>
+          </button>
+          <button
+            class="absolute top-1/2 -right-4 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-gray-100 focus:outline-none next-testimonial"
+          >
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+
+          <!-- Dots -->
+          <div class="flex justify-center mt-8 testimonial-dots">
+            <button
+              class="w-3 h-3 rounded-full bg-primary mx-1 dot-active"
+            ></button>
+            <button class="w-3 h-3 rounded-full bg-gray-300 mx-1"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-300 mx-1"></button>
+          </div>
+        </div>
+
+        <!-- Client Logos -->
+        <div class="mt-16">
+          <h3 class="text-xl font-semibold text-center mb-8">Trusted By</h3>
+          <div
+            class="flex flex-wrap justify-center items-center gap-8 md:gap-16"
+          >
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center text-gray-500"
+              >
+                <i class="ri-shopping-bag-fill ri-2x"></i>
+              </div>
+              <span class="text-sm font-medium mt-2">Urban Outfitters</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center text-gray-500"
+              >
+                <i class="ri-takeaway-fill ri-2x"></i>
+              </div>
+              <span class="text-sm font-medium mt-2">FoodDash</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center text-gray-500"
+              >
+                <i class="ri-code-box-fill ri-2x"></i>
+              </div>
+              <span class="text-sm font-medium mt-2">TechSolutions</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center text-gray-500"
+              >
+                <i class="ri-heart-fill ri-2x"></i>
+              </div>
+              <span class="text-sm font-medium mt-2">GlowUp</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center text-gray-500"
+              >
+                <i class="ri-run-fill ri-2x"></i>
+              </div>
+              <span class="text-sm font-medium mt-2">FitLife</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 flex items-center justify-center text-gray-500"
+              >
+                <i class="ri-bank-fill ri-2x"></i>
+              </div>
+              <span class="text-sm font-medium mt-2">WealthWise</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Let's Work Together</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Ready to elevate your social media presence? Get in touch to discuss
+            how we can achieve your marketing goals.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <!-- Contact Information -->
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Email</h4>
+                  <p class="text-gray-600">hello@socialmediaportfolio.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Phone</h4>
+                  <p class="text-gray-600">(555) 123-4567</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                >
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Location</h4>
+                  <p class="text-gray-600">
+                    San Francisco, CA (Remote Available)
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                >
+                  <i class="ri-calendar-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Availability</h4>
+                  <p class="text-gray-600">Taking new clients for June 2025</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h4 class="font-medium mb-4">Connect With Me</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-instagram-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-twitter-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-behance-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Send Me a Message</h3>
+
+            <form class="space-y-4">
+              <div class="relative">
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="name"
+                  class="absolute text-gray-500 left-4 top-3 transition-all duration-200 pointer-events-none"
+                  >Your Name</label
+                >
+              </div>
+
+              <div class="relative">
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="email"
+                  class="absolute text-gray-500 left-4 top-3 transition-all duration-200 pointer-events-none"
+                  >Your Email</label
+                >
+              </div>
+
+              <div class="relative">
+                <input
+                  type="text"
+                  id="company"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder=" "
+                />
+                <label
+                  for="company"
+                  class="absolute text-gray-500 left-4 top-3 transition-all duration-200 pointer-events-none"
+                  >Company Name</label
+                >
+              </div>
+
+              <div>
+                <label class="block text-gray-700 mb-2">Service Needed</label>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="flex items-center">
+                    <input type="checkbox" id="strategy" class="hidden" />
+                    <label
+                      for="strategy"
+                      class="flex items-center cursor-pointer"
+                    >
+                      <span
+                        class="w-5 h-5 inline-block mr-2 rounded border border-gray-300 flex-shrink-0 custom-checkbox"
+                      ></span>
+                      <span class="text-gray-700">Strategy</span>
+                    </label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" id="content" class="hidden" />
+                    <label
+                      for="content"
+                      class="flex items-center cursor-pointer"
+                    >
+                      <span
+                        class="w-5 h-5 inline-block mr-2 rounded border border-gray-300 flex-shrink-0 custom-checkbox"
+                      ></span>
+                      <span class="text-gray-700">Content Creation</span>
+                    </label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" id="management" class="hidden" />
+                    <label
+                      for="management"
+                      class="flex items-center cursor-pointer"
+                    >
+                      <span
+                        class="w-5 h-5 inline-block mr-2 rounded border border-gray-300 flex-shrink-0 custom-checkbox"
+                      ></span>
+                      <span class="text-gray-700">Management</span>
+                    </label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" id="analytics" class="hidden" />
+                    <label
+                      for="analytics"
+                      class="flex items-center cursor-pointer"
+                    >
+                      <span
+                        class="w-5 h-5 inline-block mr-2 rounded border border-gray-300 flex-shrink-0 custom-checkbox"
+                      ></span>
+                      <span class="text-gray-700">Analytics</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative">
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder=" "
+                  required
+                ></textarea>
+                <label
+                  for="message"
+                  class="absolute text-gray-500 left-4 top-3 transition-all duration-200 pointer-events-none"
+                  >Your Message</label
+                >
+              </div>
+
+              <div class="flex items-center">
+                <label class="custom-switch mr-3">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+                <span class="text-sm text-gray-600"
+                  >Subscribe to my monthly social media tips newsletter</span
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-3 bg-primary text-white font-medium !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <a
+              href="#"
+              class="text-2xl font-['Pacifico'] text-white mb-4 inline-block"
+              >logo</a
+            >
+            <p class="text-gray-400 mb-6">
+              Elevating brands through strategic social media marketing since
+              2022.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="ri-behance-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#metrics"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Metrics</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Strategy Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Content Creation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Community Management</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Analytics & Reporting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Influencer Partnerships</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Paid Social Campaigns</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+            <p class="text-gray-400 mb-4">
+              Subscribe for monthly social media tips and insights.
+            </p>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="px-4 py-2 w-full bg-gray-800 border-none rounded-l focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm"
+              />
+              <button
+                type="submit"
+                class="px-4 py-2 bg-primary text-white !rounded-r-button whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+            <div class="mt-6">
+              <div class="flex items-center space-x-3 mb-2">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-award-fill text-primary"></i>
+                </div>
+                <span class="text-sm text-gray-400"
+                  >Certified Social Media Strategist</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-medal-fill text-primary"></i>
+                </div>
+                <span class="text-sm text-gray-400"
+                  >Top Rated Freelancer 2024</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 Social Media Portfolio. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Counter Animation
+        const counters = document.querySelectorAll(".counter-value");
+        counters.forEach((counter) => {
+          const target = parseFloat(counter.getAttribute("data-target"));
+          const duration = 2000; // ms
+          const step = target / (duration / 16); // 60fps
+          let current = 0;
+
+          const updateCounter = () => {
+            current += step;
+            if (current < target) {
+              counter.textContent = current.toFixed(1).replace(/\.0$/, "");
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = target.toString().replace(/\.0$/, "");
+            }
+          };
+
+          updateCounter();
+        });
+
+        // Progress Bar Animation
+        const progressBars = document.querySelectorAll(".progress-bar");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const width = entry.target.getAttribute("data-width");
+                entry.target.style.width = width;
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 },
+        );
+
+        progressBars.forEach((bar) => {
+          observer.observe(bar);
+        });
+
+        // Portfolio Filter
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            // Remove active class from all buttons
+            filterBtns.forEach((b) => {
+              b.classList.remove("active", "bg-primary", "text-white");
+              b.classList.add("bg-gray-100", "text-gray-700");
+            });
+
+            // Add active class to clicked button
+            btn.classList.add("active", "bg-primary", "text-white");
+            btn.classList.remove("bg-gray-100", "text-gray-700");
+
+            const filter = btn.getAttribute("data-filter");
+
+            portfolioItems.forEach((item) => {
+              if (
+                filter === "all" ||
+                item.getAttribute("data-category").includes(filter)
+              ) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+        });
+
+        // Testimonial Slider
+        const testimonialWrapper = document.querySelector(".testimonial-wrapper");
+        const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+        const prevBtn = document.querySelector(".prev-testimonial");
+        const nextBtn = document.querySelector(".next-testimonial");
+        const dots = document.querySelectorAll(".testimonial-dots button");
+
+        let currentSlide = 0;
+
+        function goToSlide(index) {
+          if (index < 0) index = testimonialSlides.length - 1;
+          if (index >= testimonialSlides.length) index = 0;
+
+          currentSlide = index;
+          testimonialWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+          // Update dots
+          dots.forEach((dot, i) => {
+            dot.classList.remove("bg-primary", "dot-active");
+            dot.classList.add("bg-gray-300");
+            if (i === currentSlide) {
+              dot.classList.add("bg-primary", "dot-active");
+              dot.classList.remove("bg-gray-300");
+            }
+          });
+        }
+
+        prevBtn.addEventListener("click", () => {
+          goToSlide(currentSlide - 1);
+        });
+
+        nextBtn.addEventListener("click", () => {
+          goToSlide(currentSlide + 1);
+        });
+
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            goToSlide(i);
+          });
+        });
+
+        // Auto slide every 5 seconds
+        setInterval(() => {
+          goToSlide(currentSlide + 1);
+        }, 5000);
+
+        // Custom Checkbox
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+          const label = checkbox.nextElementSibling;
+          const customCheckbox = label.querySelector(".custom-checkbox");
+
+          checkbox.addEventListener("change", () => {
+            if (checkbox.checked) {
+              customCheckbox.classList.add("bg-primary", "border-primary");
+              customCheckbox.innerHTML =
+                '<svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+            } else {
+              customCheckbox.classList.remove("bg-primary", "border-primary");
+              customCheckbox.innerHTML = "";
+            }
+          });
+        });
+
+        // Form Label Animation
+        const formInputs = document.querySelectorAll(
+          'input[placeholder=" "], textarea[placeholder=" "]',
+        );
+        formInputs.forEach((input) => {
+          input.addEventListener("focus", () => {
+            const label = input.nextElementSibling;
+            label.style.transform = "translateY(-18px) scale(0.8)";
+            label.style.color = "#4f46e5";
+          });
+
+          input.addEventListener("blur", () => {
+            const label = input.nextElementSibling;
+            if (input.value === "") {
+              label.style.transform = "";
+              label.style.color = "";
+            } else {
+              label.style.transform = "translateY(-18px) scale(0.8)";
+              label.style.color = "#6b7280";
+            }
+          });
+
+          // Check initial state
+          if (input.value !== "") {
+            const label = input.nextElementSibling;
+            label.style.transform = "translateY(-18px) scale(0.8)";
+            label.style.color = "#6b7280";
+          }
+        });
+      });
+
+      // Charts
+      document.addEventListener("DOMContentLoaded", function () {
+        // Engagement Rates Chart
+        const engagementChart = echarts.init(
+          document.getElementById("engagementChart"),
+        );
+        const engagementOption = {
+          animation: false,
+          tooltip: {
+            trigger: "axis",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          xAxis: {
+            type: "category",
+            data: [
+              "Instagram",
+              "TikTok",
+              "Facebook",
+              "LinkedIn",
+              "Twitter",
+              "Pinterest",
+            ],
+            axisLabel: {
+              color: "#1f2937",
+            },
+          },
+          yAxis: {
+            type: "value",
+            name: "Engagement Rate (%)",
+            nameTextStyle: {
+              color: "#1f2937",
+            },
+            axisLabel: {
+              formatter: "{value}%",
+              color: "#1f2937",
+            },
+          },
+          series: [
+            {
+              name: "Industry Average",
+              type: "bar",
+              data: [1.2, 3.5, 0.8, 1.0, 0.7, 1.5],
+              itemStyle: {
+                color: "rgba(141, 211, 199, 1)",
+              },
+              barWidth: "20%",
+            },
+            {
+              name: "My Campaigns",
+              type: "bar",
+              data: [4.8, 8.2, 2.5, 3.2, 2.1, 3.7],
+              itemStyle: {
+                color: "rgba(87, 181, 231, 1)",
+              },
+              barWidth: "20%",
+            },
+          ],
+          grid: {
+            left: 10,
+            right: 10,
+            bottom: 10,
+            top: 50,
+            containLabel: true,
+          },
+          legend: {
+            data: ["Industry Average", "My Campaigns"],
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+        };
+        engagementChart.setOption(engagementOption);
+
+        // Audience Growth Chart
+        const audienceChart = echarts.init(document.getElementById("audienceChart"));
+        const audienceOption = {
+          animation: false,
+          tooltip: {
+            trigger: "axis",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          xAxis: {
+            type: "category",
+            data: [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec",
+            ],
+            axisLabel: {
+              color: "#1f2937",
+            },
+          },
+          yAxis: {
+            type: "value",
+            name: "Followers (K)",
+            nameTextStyle: {
+              color: "#1f2937",
+            },
+            axisLabel: {
+              formatter: "{value}K",
+              color: "#1f2937",
+            },
+          },
+          series: [
+            {
+              name: "Instagram",
+              type: "line",
+              data: [10, 15, 22, 28, 35, 42, 48, 55, 62, 68, 75, 82],
+              smooth: true,
+              symbol: "none",
+              lineStyle: {
+                width: 3,
+                color: "rgba(87, 181, 231, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(87, 181, 231, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(87, 181, 231, 0.05)",
+                    },
+                  ],
+                },
+              },
+            },
+            {
+              name: "TikTok",
+              type: "line",
+              data: [5, 18, 40, 65, 90, 120, 150, 185, 210, 240, 280, 320],
+              smooth: true,
+              symbol: "none",
+              lineStyle: {
+                width: 3,
+                color: "rgba(251, 191, 114, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(251, 191, 114, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(251, 191, 114, 0.05)",
+                    },
+                  ],
+                },
+              },
+            },
+          ],
+          grid: {
+            left: 10,
+            right: 10,
+            bottom: 10,
+            top: 50,
+            containLabel: true,
+          },
+          legend: {
+            data: ["Instagram", "TikTok"],
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+        };
+        audienceChart.setOption(audienceOption);
+
+        // Content Performance Chart
+        const contentChart = echarts.init(document.getElementById("contentChart"));
+        const contentOption = {
+          animation: false,
+          tooltip: {
+            trigger: "item",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          legend: {
+            orient: "vertical",
+            right: 10,
+            top: "center",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          series: [
+            {
+              name: "Engagement by Content Type",
+              type: "pie",
+              radius: ["40%", "70%"],
+              avoidLabelOverlap: false,
+              itemStyle: {
+                borderRadius: 8,
+              },
+              label: {
+                show: false,
+              },
+              emphasis: {
+                label: {
+                  show: false,
+                },
+              },
+              data: [
+                {
+                  value: 35,
+                  name: "Video Content",
+                  itemStyle: { color: "rgba(87, 181, 231, 1)" },
+                },
+                {
+                  value: 25,
+                  name: "Image Posts",
+                  itemStyle: { color: "rgba(141, 211, 199, 1)" },
+                },
+                {
+                  value: 18,
+                  name: "Stories/Reels",
+                  itemStyle: { color: "rgba(251, 191, 114, 1)" },
+                },
+                {
+                  value: 12,
+                  name: "Carousels",
+                  itemStyle: { color: "rgba(252, 141, 98, 1)" },
+                },
+                { value: 10, name: "Text/Link Posts", itemStyle: { color: "#ccc" } },
+              ],
+            },
+          ],
+        };
+        contentChart.setOption(contentOption);
+
+        // ROI Chart
+        const roiChart = echarts.init(document.getElementById("roiChart"));
+        const roiOption = {
+          animation: false,
+          tooltip: {
+            trigger: "axis",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          xAxis: {
+            type: "category",
+            data: ["Urban", "FoodDash", "TechSol", "GlowUp", "FitLife", "WealthWise"],
+            axisLabel: {
+              color: "#1f2937",
+            },
+          },
+          yAxis: {
+            type: "value",
+            name: "ROI (%)",
+            nameTextStyle: {
+              color: "#1f2937",
+            },
+            axisLabel: {
+              formatter: "{value}%",
+              color: "#1f2937",
+            },
+          },
+          series: [
+            {
+              name: "Campaign ROI",
+              type: "bar",
+              data: [320, 475, 280, 350, 410, 250],
+              itemStyle: {
+                color: function (params) {
+                  const colorList = [
+                    "rgba(87, 181, 231, 1)",
+                    "rgba(251, 191, 114, 1)",
+                    "rgba(141, 211, 199, 1)",
+                    "rgba(252, 141, 98, 1)",
+                    "rgba(87, 181, 231, 0.8)",
+                    "rgba(141, 211, 199, 0.8)",
+                  ];
+                  return colorList[params.dataIndex];
+                },
+                borderRadius: [8, 8, 0, 0],
+              },
+              barWidth: "40%",
+            },
+          ],
+          grid: {
+            left: 10,
+            right: 10,
+            bottom: 10,
+            top: 50,
+            containLabel: true,
+          },
+        };
+        roiChart.setOption(roiOption);
+
+        // Resize charts when window size changes
+        window.addEventListener("resize", function () {
+          engagementChart.resize();
+          audienceChart.resize();
+          contentChart.resize();
+          roiChart.resize();
+        });
+      });
+    </script>
+  </body>
+</html>
